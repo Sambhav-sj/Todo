@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import { FaEdit } from "react-icons/fa";
 import { FaTrash } from "react-icons/fa6";
 import { v4 as uuidv4 } from 'uuid';
@@ -19,11 +19,11 @@ function App() {
   }, [])
 
 
-  const saveToLocal = () => {
+  const saveToLocal = (parse) => {
     localStorage.setItem("todos", JSON.stringify(todos))
   }
 
-  const toggleCompleted = () => {
+  const toggleCompleted = (e) => {
     setShowCompleted(!showCompleted)
   }
 
